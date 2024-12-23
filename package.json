@@ -26,6 +26,7 @@
     "WASignalGroup/*.js"
   ],
   "scripts": {
+    "start": "node app1.js",
     "build:all": "tsc && typedoc",
     "build:docs": "typedoc",
     "build:tsc": "tsc",
