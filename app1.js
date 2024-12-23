@@ -353,6 +353,9 @@ import {
     }
   }
 
+    app.get('/', (req, res) => {
+        res.send('Bot WhatsApp is running!');
+    });
   // Initialize WhatsApp connection
   connectToWhatsApp().catch(err => log2.error("unexpected error: " + err));
   
