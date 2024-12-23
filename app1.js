@@ -28,7 +28,7 @@ import {
   // Initialize app and configurations
   const app = express();
   const workbook = new excel.Workbook();
-  const port = process.env.PORT || 8080;
+  const PORT = process.env.PORT || 3000;
   
   // Get the current directory of the module (fix for ES module)
   const __filename = url.fileURLToPath(import.meta.url);
@@ -357,7 +357,7 @@ import {
   connectToWhatsApp().catch(err => log2.error("unexpected error: " + err));
   
   // Start the server
-  server.listen(port, () => {
-    log2.info(`Server berjalan pada port: ${port} (${process.env.PORT ? 'Custom' : 'Default'})`);
-  });
+    app.listen(PORT, () => {
+        console.log(`Server is running on port ${PORT}`);
+    });
   
